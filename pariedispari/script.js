@@ -7,10 +7,13 @@ while (userChoice != 'even' && userChoice != 'odd') {
 
 // L'utente sceglie un numero da 1 a 5
 let userNum = Number(prompt('Enter a number from 1 to 5'))
+let userNumStr = userNum.toString()
 
-while (isNaN(userNum) || userNum < 1 || userNum > 5) {
+while (isNaN(userNum) || userNum < 1 || userNum > 5 || userNumStr.length > 1) {
     userNum = Number(prompt('Invalid input. Please, enter a number from 1 to 5'))
-}
+    userNumStr = userNum.toString()
+} 
+
 document.writeln(`You chose ${userChoice} and ${userNum} <br><br>`);
 
 // Funzione per generare un numero casuale da 1 a 5 per la scelta del pc

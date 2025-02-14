@@ -7,9 +7,9 @@ function palindrome () {
 
     // If statement per controllare che le due stringhe risultanti siano uguali e stampo il risultato nella pagina web
     if (reversedWord == userWord) {
-        document.writeln('The word you entered is palindrome')
+        document.writeln('The word you entered is a palindrome')
     } else {
-        document.writeln('The word you entered is not palindrome')
+        document.writeln('The word you entered is not a palindrome')
     }
 }
 
