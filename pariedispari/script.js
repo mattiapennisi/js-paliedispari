@@ -3,12 +3,12 @@
 
 // L'utente sceglie pari o dispari
 const userChoice = prompt('Enter "even" or "odd"').toLowerCase()
-console.log(userChoice);
+document.writeln(`You chose ${userChoice} <br>`);
 
 
 // L'utente sceglie un numero da 1 a 5
 const userNum = Number(prompt('Enter a number from 1 to 5'))
-console.log(userNum);
+document.writeln(`You chose ${userNum} <br>`);
 
 
 // Funzione per generare un numero casuale da 1 a 5 per la scelta del pc
@@ -16,7 +16,7 @@ let pcNum = null
 
 function generatePcNum () {
     pcNum = Math.floor(Math.random()*5 + 1)
-    console.log(pcNum);
+    document.writeln(`Pc chose ${pcNum} <br>`);
 } 
 
 generatePcNum()
@@ -24,7 +24,7 @@ generatePcNum()
 // Sommo il numero dell'utente e quello del pc
 
 const sum = userNum + pcNum
-console.log(sum);
+document.writeln(`The sum of these numbers is ${sum} <br>`);
 
 // Funzione per stabilire se la somma dei numeri è pari o dispari
 
@@ -36,7 +36,7 @@ function isEvenOrOdd() {
     } else if (sum % 2 == 1) {
         sumEvenOdd = 'odd'
     }
-    console.log(sumEvenOdd);
+    document.writeln(`The sum is ${sumEvenOdd}, so: <br>`);
 }
 
 isEvenOrOdd()
