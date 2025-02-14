@@ -1,35 +1,25 @@
+// Bonus 2: niente array, solo stringhe
+
+// Chiedo all'utente di inserire una parola
+const userWord = prompt('Enter a word') 
+
+let reversedWord = ''
+
+let userWordChar = null
+
+// Funzione per invertire la parola inserita dall'utente e stabilire se è palindroma
+
 function palindrome () {
-    // Chiedo all'utente di inserire una parola
-    const userWord = prompt('Enter a word')
 
-    // Converto la stringa in un array e inverto gli elementi creando una nuova stringa
-
-    let reversedWord = []
-
-    let userWordToArray = []
-
-    let userWordChar = null
-
-    for (let i = 0; i < userWord.length; i++) {
-        userWordChar = userWord.slice(i)
-        console.log(userWordChar);
+    // Controllo tutti i caratteri inseriti e li aggiungo al contrario a una nuova stringa
+    for (let i = userWord.length - 1; i >= 0 ; i--) {
+        userWordChar = userWord.charAt(i)
         
-        userWordToArray.push(userWordChar)
-        console.log(userWordToArray);
+        reversedWord += (userWordChar)
     }
-
-    for (let i = 0; i < userWord.length; i++) {
-        let userWordChar = userWordToArray.pop()
-        console.log(userWordChar);
-        
-        reversedWord.unshift(userWordChar)
-        console.log(reversedWord);
-    }
-
-    reversedWord = reversedWord.join('')
 
     // If statement per controllare che le due stringhe risultanti siano uguali e per stampare il risultato nella pagina web
-    if (reversedWord.toString() == userWord) {
+    if (reversedWord == userWord) {
         document.writeln('The word you entered is a palindrome')
     } else {
         document.writeln('The word you entered is not a palindrome')

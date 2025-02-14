@@ -10,7 +10,7 @@ function palindrome () {
     let userWordToArray = userWord.split('')
     console.log(userWordToArray);
 
-    // For loop per prendere ciascun elemento dell'array e inserire al contrario in un nuovo array
+    // For loop per prendere ciascun elemento dell'array e inserirlo al contrario in un nuovo array
     for (let i = 0; i < userWordToArray.length; i++) {
         let userWordChar = userWord.charAt(i)
         console.log(userWordChar);
@@ -23,7 +23,6 @@ function palindrome () {
     reversedWord = reversedWord.join('')
     console.log(reversedWord);
     
-
     // If statement per controllare che le due stringhe risultanti siano uguali e per stampare il risultato nella pagina web
     if (reversedWord.toString() == userWord) {
         document.writeln('The word you entered is a palindrome')
