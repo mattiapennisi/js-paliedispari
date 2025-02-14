@@ -6,23 +6,27 @@ function palindrome () {
 
     let reversedWord = []
 
-    // Split method per prendere ciascun carattere della stringa e inserirli in un array
-    let userWordToArray = userWord.split('')
-    console.log(userWordToArray);
+    let userWordToArray = []
 
-    // For loop per prendere ciascun elemento dell'array e inserire al contrario in un nuovo array
-    for (let i = 0; i < userWordToArray.length; i++) {
-        let userWordChar = userWord.charAt(i)
+    let userWordChar = null
+
+    for (let i = 0; i < userWord.length; i++) {
+        userWordChar = userWord.slice(i)
+        console.log(userWordChar);
+        
+        userWordToArray.push(userWordChar)
+        console.log(userWordToArray);
+    }
+
+    for (let i = 0; i < userWord.length; i++) {
+        let userWordChar = userWordToArray.pop()
         console.log(userWordChar);
         
         reversedWord.unshift(userWordChar)
         console.log(reversedWord);
     }
 
-    // Join method per convertire gli elementi in una stringa unica, senza spazi
     reversedWord = reversedWord.join('')
-    console.log(reversedWord);
-    
 
     // If statement per controllare che le due stringhe risultanti siano uguali e per stampare il risultato nella pagina web
     if (reversedWord.toString() == userWord) {
