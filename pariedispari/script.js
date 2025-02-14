@@ -1,6 +1,7 @@
 // L'utente sceglie pari o dispari
 let userChoice = prompt('Enter "even" or "odd"').toLowerCase()
 
+// Ciclo while per evitare che l'utente inserisca qualcosa di diverso da 'even' o 'odd'. L'input non è case sensitive perché viene sempre convertito tramite il method .toLowerCase()
 while (userChoice != 'even' && userChoice != 'odd') {
     userChoice = prompt('Invalid input. Please, enter "even" or "odd"').toLowerCase()
 }
@@ -9,6 +10,7 @@ while (userChoice != 'even' && userChoice != 'odd') {
 let userNum = Number(prompt('Enter a number from 1 to 5'))
 let userNumStr = userNum.toString()
 
+// Ciclo while per evitare che l'utente inserisca input non validi, numeri che non vanno da 1 a 5 o decimali tra 1 e 5
 while (isNaN(userNum) || userNum < 1 || userNum > 5 || userNumStr.length > 1) {
     userNum = Number(prompt('Invalid input. Please, enter a number from 1 to 5'))
     userNumStr = userNum.toString()
