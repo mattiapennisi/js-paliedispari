@@ -16,14 +16,14 @@ while (isNaN(userNum) || userNum < 1 || userNum > 5 || userNumStr.length > 1) {
     userNumStr = userNum.toString()
 } 
 
-document.writeln(`You chose ${userChoice} and ${userNum} <br><br>`);
+document.writeln(`You chose ${userChoice} and ${userNum} <br><br>`)
 
 // Funzione per generare un numero casuale da 1 a 5 per la scelta del pc
 let pcNum = null
 
 function generatePcNum () {
     pcNum = Math.floor(Math.random()*5 + 1)
-    document.writeln(`Pc chose ${pcNum} <br><br>`);
+    document.writeln(`Pc chose ${pcNum} <br><br>`)
 } 
 
 generatePcNum()
@@ -31,7 +31,7 @@ generatePcNum()
 // Sommo il numero dell'utente e quello del pc
 
 const sum = userNum + pcNum
-document.writeln(`The sum of these numbers is ${sum} <br><br>`);
+document.writeln(`The sum of these numbers is ${sum} <br><br>`)
 
 // Funzione per stabilire se la somma dei numeri è pari o dispari
 
@@ -43,7 +43,7 @@ function isEvenOrOdd() {
     } else if (sum % 2 == 1) {
         sumEvenOdd = 'odd'
     }
-    document.writeln(`The sum is ${sumEvenOdd}, so: <br><br>`);
+    document.writeln(`The sum is ${sumEvenOdd}, so: <br><br>`)
 }
 
 isEvenOrOdd()
