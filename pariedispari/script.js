@@ -2,11 +2,11 @@
 let userChoice = prompt('Enter "even" or "odd"').toLowerCase()
 
 while (userChoice != 'even' && userChoice != 'odd') {
-    userChoice = String(prompt('Invalid input. Please, enter "even" or "odd"'))
+    userChoice = prompt('Invalid input. Please, enter "even" or "odd"').toLowerCase()
 }
 
 // L'utente sceglie un numero da 1 a 5
-const userNum = Number(prompt('Enter a number from 1 to 5'))
+let userNum = Number(prompt('Enter a number from 1 to 5'))
 
 while (isNaN(userNum) || userNum < 1 || userNum > 5) {
     userNum = Number(prompt('Invalid input. Please, enter a number from 1 to 5'))
