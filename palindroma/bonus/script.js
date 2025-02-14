@@ -3,20 +3,29 @@ function palindrome () {
     const userWord = prompt('Enter a word')
 
     // Converto la stringa in un array e inverto gli elementi creando una nuova stringa
-    // let userWordToArray = userWord.split('')
-    // console.log(userWordArray);
 
     let reversedWord = []
-    
-    let userWordChar = null
 
-    for (let i = 0; i < 4; i++) {
-        userWordChar = userWord.slice(i, 1)
+    let userWordToArray = userWord.split('')
+    console.log(userWordToArray);
+
+    for (let i = 0; i < userWordToArray.length; i++) {
+        let userWordChar = userWord.charAt(i)
         console.log(userWordChar);
         
         reversedWord.unshift(userWordChar)
         console.log(reversedWord);
     }
+
+    reversedWord = reversedWord.join('')
+
+    // for (let i = 0; i < userWord.length - 1; i++) {
+    //     let userWordChar = userWord.slice(i, 1)
+    //     console.log(userWordChar);
+        
+    //     reversedWord.unshift(userWordChar)
+    //     console.log(reversedWord);
+    // }
 
     // If statement per controllare che le due stringhe risultanti siano uguali e per stampare il risultato nella pagina web
     if (reversedWord.toString() == userWord) {
